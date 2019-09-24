@@ -1,0 +1,41 @@
+Logic:
+  Symbols:
+    ~ = not
+    & = and
+    | = or
+    => = if-then
+    <=> = bi-conditional
+
+  Logic Table (basic simple and compound sentences)
+            p      q      ~p    p|q    p&q    p=>q  p<=>q   p&~p   p=>p
+    11      T      T      F      T      T      T      T      F      T
+    10      T      F      F      T      F      F      F      F      T
+    01      F      T      T      T      F      T      F      F      T
+    00      F      F      T      F      F      T      T      F      T
+
+2 fundamentals of language:
+  Syntax: "grammar"
+    2 Kinds of Logical Sentences
+      Simple: 1 proposition constant (can test with java quick reference)
+      Compound: more than 1 proposition constant with other factors (other chars or modifiers)
+      * If syntactically correct, it is legal.
+  Semantics: refers to how we determine the truth value of a sentence
+Other Vocabulary:
+  Evaluation: determine the truth value of a given logical sentence (pay attention to order of operation)
+  Satisfaction: there exists a truth assignment that makes the sentence true
+  Types of sentences:
+    Unsatisfiable: there is no truth assignments that yields "true"
+    Valid: no matter the truth assignment, the sentence yields "true"
+    Contingent: there are truth assignments that are "true" or "false" (has both)
+  Equivalent: two (or more) logical sentences that when attached with a bi-conditional statement yield a "valid"
+  Entailment: two (or more) logical sentences that when attached with a conditional statement yield a "valid" (not always symmetrical f(x)=>g(x) doesn't necessarily mean g(x)=>f(x))
+  Consistency: if there exists at least 1 truth assignment where both sentences are "true" (attach 2 logical sentences with a ____ and if it yields ____ the sentences are consistent)
+
+Vocabulary 2
+  Exception: an event that interrupts the code flow to help find errors / prevent breaks
+  Iterator: an object in java that supports iteration (doing something over and over again)
+  Generalization: taking an individual item and generalizing for use in multiple places
+  Sine function: computes y coordinate of e^i(x) a complex number
+  Tree: a system of organization (used in abstraction) where there is a base class with classes of more complexity branching out
+  Pointer: a small number that points to a larger file (less code to transmit over wifi, etc...)
+  Complex number: a number that is in terms of i and a constant "a + bi" where i = sqrt(-1)

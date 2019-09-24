@@ -1,2 +1,3 @@
-# APCS
-for school
+# AP Computer Science Work
+
+My projects / assignments for APCS.

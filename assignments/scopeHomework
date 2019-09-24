@@ -1,0 +1,28 @@
+Question 1: What does the following code print out (feel free to run it to find out.)?
+	3, 3.14, 3, 7, 7, 88, 2, 2.7
+Question 2: The number 7 gets printed out twice in a row, but the number 88 is followed by a 2. Why?
+	b is a static variable so it will be changed for all instances of a class
+Question 3: The first value printed out is that of MyScope.b. If we try to print MyScope.a, what happens, and why?
+	it throws an error that "non static variable a cannot be referenced in a static context". This is because a class has not been created so the variable a does not have an instance to call.
+Question 4 (hard, do your best): Identify a way to generalize the way one can establish the scope of a variable. If you wish, you can invent a new declaration mechanism, for example you might say:
+I wish to make it possible to declare a variable using the special word LocalEverywhere. This makes a local variable in all methods, it would look like
+this:
+public class aClassThatUsesMyNewDeclaration {
+LocalEverywhere int a;
+public int add(int x, int y){
+a = x + y;
+return a;
+}
+public int sub(int x, int y){
+a = x – y;
+return a;
+}
+}
+Then you would justify this new construct, and you would also criticize it.
+Note especially that you can get full credit for a construct that would be a very
+bad idea --- so long as you outline just why the construct would be bad.
+You should probably talk to me and your classmates about this problem as part of
+the process of solving the problem.
+Question 5: So, you thought there were only four questions, but here you are,
+reading further. Very well, try this one: Is it a good idea to be able to change the scope of
+a variable based on a conditional value that is not known until runtime?

@@ -1,0 +1,85 @@
+Vocabulary 1
+	during iteration, an exception can be used to find which iterator value is causing the code to break
+
+	during branch processing, an exception can give insight as to which branch process is the one that broke
+
+	when exceptions are thrown, pointers given in the exception can lead the programmers focus to find which items broke the code
+
+	if a top level class in a tree throws an exception, any sub-class for that class will likely also throw exceptions
+
+	in a sin function, the most common reason that an exception would be thrown for beginner programers would be leaving out the Math.toRadian()
+
+	if a complex number is required, and the coefficient of i is 0, an exception will be thrown
+
+	if you want to do iteration across multiple branches, you should use different iterator variables so as to not confuse the compiler
+
+	during for loop iteration, the variable i (used to control amount of iterations) can also be used as a pointer for an item in an array or a character in a string
+
+	instead of constructing a tree of classes that each add a value to an array of integers representing the fibonacci sequence, an iterator could be used to automate the process into one function
+
+	to make the star, I used an iterator containing a sin function to create an array of integers that find the points of a star on a circle
+
+	complex numbers should be avoided as values for the iterator variable because the compiler expects an integer value instead
+
+	pointers are useful when trying to find a value form a specific branch process
+
+	branching can be used with iteration to run a function on each leaf of a tree
+
+	a method can be made that takes an int (a) and returns sin(a), this could be used to branch process multiple sin functions of diff values
+
+	a method can be made that converts complex numbers into and out of a double[] format with the first value representing the constant and the second representing the coefficient of i
+
+	each sub function in a tree has a pointer
+
+	a pointer could locate the value of a sin function that had been saved as a double
+
+	a pointer could locate a complex number that had been saved as an double[] with the first value representing the constant and the second representing the coefficient of i
+
+	starting with the sin function, one could construct a tree containing all the other trig functions in terms of sin (eg: cos(x) = sin((pi/2)-x))
+
+	a tree can be used to store complex numbers
+
+	the output of a sin function will never be a complex number
+
+Vocabulary 2
+	If a variable called in a function cannot be located in that function, it is searched for in the last function from the stack.
+
+	if a variable called in a function cannot be located in the function's scope, the scope of the function that called the original function is searched.
+
+	if a variable is not defined within a block, the scope of the outer function / block is scoped in dynamic scoping.
+
+	if a var is not defined within one scope dynamic scope searches outer scope while lexical searches the global scope.
+
+	if a var is a global var, there is no need to dynamically scope
+
+	the namespace Math can be used to call functions that are not defined within the scope of your project.
+
+	if a var cannot be found within the scope of a function, the last function in the stack's scope will be searched.
+
+	blocks are not always added to the stack like functions are.
+
+	lexical scoping doesn't use the stack, instead it searches the global scope.
+
+	global variables can be referenced from anywhere within the stack.
+
+	whenever a namespace function is called to the stack, it points to a scope which contains "global" functions that can be called anywhere
+
+	the function scope contains all vars defined within the function similar to how a block scope contains all vars defined within that block.
+
+	in lexical scoping, if a var isn't located within a function's scope, it is searched for in the global scope
+
+	a global var can be referenced within any function, even if it is outside of the function's scope
+
+	namespaces such as Math can be used within functions to call functions that are not defined within the function's scope.
+
+	in lexical scoping, if a var isn't located within a block's scope, it is searched for in the global scope
+
+	a global var can be referenced within any block, even if it is outside of the block's scope
+
+	namespace functions (eg: Math.sin()) can be called in any block regardless of whether or not the function is defined within the block's scope
+
+	lexical scoping is not needed to find global variables because they can be referenced from anywhere.
+
+	lexical scoping is not needed to use namespace functions because they can be referenced from anywhere.
+
+	namespaces are similar to global variables in that any variables or functions defined in the namespace can be called/referenced from anywhere

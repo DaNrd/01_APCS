@@ -4,25 +4,26 @@ Question 2: The number 7 gets printed out twice in a row, but the number 88 is f
 	b is a static variable so it will be changed for all instances of a class
 Question 3: The first value printed out is that of MyScope.b. If we try to print MyScope.a, what happens, and why?
 	it throws an error that "non static variable a cannot be referenced in a static context". This is because a class has not been created so the variable a does not have an instance to call.
-Question 4 (hard, do your best): Identify a way to generalize the way one can establish the scope of a variable. If you wish, you can invent a new declaration mechanism, for example you might say:
-I wish to make it possible to declare a variable using the special word LocalEverywhere. This makes a local variable in all methods, it would look like
-this:
-public class aClassThatUsesMyNewDeclaration {
-LocalEverywhere int a;
-public int add(int x, int y){
-a = x + y;
-return a;
-}
-public int sub(int x, int y){
-a = x – y;
-return a;
-}
-}
-Then you would justify this new construct, and you would also criticize it.
-Note especially that you can get full credit for a construct that would be a very
-bad idea --- so long as you outline just why the construct would be bad.
-You should probably talk to me and your classmates about this problem as part of
-the process of solving the problem.
-Question 5: So, you thought there were only four questions, but here you are,
-reading further. Very well, try this one: Is it a good idea to be able to change the scope of
-a variable based on a conditional value that is not known until runtime?
+Question 4 My proposed solution consists of 2 new deceleration types: everywhere and nowhere. It also has two modifiers, include and exclude;
+	Example code:
+		public class Class {
+			everywhere int y = 0; // sets the 'everywhere' variable y (similar to the local everywhere example)
+			nowhere int x = 1; // sets the 'nowhere' variable (opposite of everywhere)
+			public static void main(String[] args){
+				int x = 5;
+				System.out.println(y); // prints 0
+				System.out.println(x); // prints 5
+				System.out.println(fun1(x)); // prints 8
+				System.out.println(fun2(y)); // prints 1
+			}
+			public int fun1(int a){
+				exclude y; // ignores the 'everywhere' variable y
+				int y = 3; // declares local variable y and sets it to 3
+				return a + y; // returns 5 + 3
+			}
+			public int fun2(int a){
+				include x; // includes the 'nowhere' variable x
+				return a + x; // returns 0 + 1
+			}
+		}
+	There are a few flaws with this concept. The ability to have many variables with the same name would greatly reduce the readability of the code confusing both the end user and possibly even the programmer for more complex projects. Also, the "nowhere" decleration is not super usefull and probably would make more sense to just have the everywhere variable with the exclude modifier. (it might be useful in niche cases such as wanting to group all variable declerations togeather during a research project to make it easier to modify parameters without hunting through multiple classes etc...).

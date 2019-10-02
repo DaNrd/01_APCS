@@ -66,3 +66,26 @@ Vocabulary 4
 	attribute values are retrieved using accessor methods
 	attribute values are set using modifier methods
 	accessor methods get values while modifier methods set them
+
+Vocabulary 5
+	expressions can be used to assign values to primitives
+	expressions are often used to trigger a conditional statement
+	expressions are often used within linear recursion to modify the input in some way
+	expressions are often used in tree recursion to modify the input but they get run much more due to the tree recursion
+	expressions in a function with a higher order of growth get run more
+	in proper data abstraction, only relevant expression results are printed (unless you are debugging)
+	primitives are often compared to trigger conditional statements
+	primitives are often used to progress a linearly recursive function (given an int, rerun until the int == some value)
+	primitives are often used to progress a function using tree recursion and will be printed out many more times than in a linear counterpart
+	expressions within a function of higher order of growth affect primitives much more and much more often than functions of a lower order of growth
+	only relevant primitives are printed if proper data abstraction is observed
+	linear recursion statements can contain conditional statements for more complex manipulations
+	tree recursion statements can contain conditional statements to limit the number of outputs (by skipping modification / returning of some values)
+	nested conditional statements have a small (negative?) order of growth (nested if statements get run less than their parents)
+	conditional statements can be used to only print certain values in accordance to proper data abstraction
+	linear recursion doesn't run itself more than once while tree recursion does
+	a linear recursion function nested in another function will run more and therefore have a higher order of growth
+	when dealing with linear recursion, printing a final value or final list of values is often more aligned with proper data abstraction than printing every returned value
+	tree recursion has a higher order of growth than linear recursion when given the same input
+	when dealing with tree recursion, printing a final value or final list of values is often more aligned with proper data abstraction than printing every returned value
+	for proper data abstraction, it is unlikely that one would print all returned values of a function with a high order of growth

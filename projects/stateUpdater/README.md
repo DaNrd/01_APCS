@@ -9,6 +9,7 @@ Had to figure out how to deal with dimension input above 3 or below 0.
 ### Code Overview
 
 Main.java basically just creates an instance of StateUpdater.java and runs calculatePosition.
+
 StateUpdater.java basically just asks for values and moves calculated values around with double[]s.
 
 ### Major Challenges

@@ -29,7 +29,9 @@
 ### Acknowledgments
 
 	Thanks to Ben for help with stub classes.
+
 	Thanks to Quintin for a refresher on syntax.
+
 	Thanks to Josh for test cases and checking my though process.
 
 ## Built With

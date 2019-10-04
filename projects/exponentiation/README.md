@@ -23,6 +23,7 @@ All of the code is located in Exponentiation.java Which has a main function that
 ### Major Challenges
 
 Decimal exponents - still a WIP
+
 How to treat odd exponents - solved (multiply the base by base^2((power-1)/2))
 
 ## Built With

@@ -26,6 +26,7 @@ public class PhysicsFrame extends JFrame {
 			System.out.println("In how many dimensions is your motion?");
 			Scanner dimensionScanner = new Scanner(System.in);
 			d = Integer.parseInt(dimensionScanner.nextLine());
+      dimensionScanner.close();
 			if(d>3 || d<1){
 				System.out.println(" ");System.out.println(" ");System.out.println("How?");
 			} else if(d==0){
@@ -45,12 +46,15 @@ public class PhysicsFrame extends JFrame {
 				System.out.println("What is the original " + dimensionChars[i] + " position?");
 				Scanner sScanner = new Scanner(System.in);
 				retval[(3*i)] = Double.parseDouble(sScanner.nextLine())*Math.pow(-1, i);
+        sScanner.close();
 				System.out.println("What is the velocity along the " + dimensionChars[i] + " axis?");
 				Scanner vScanner = new Scanner(System.in);
 				retval[(3*i)+1] = Double.parseDouble(vScanner.nextLine())*Math.pow(-1, i);
+        vScanner.close();
 				System.out.println("What is the acceleration along the " + dimensionChars[i] + " axis?");
 				Scanner aScanner = new Scanner(System.in);
 				retval[(3*i)+2] = Double.parseDouble(aScanner.nextLine())*Math.pow(-1, i);
+        aScanner.close();
         retval[retval.length-1] = System.currentTimeMillis();
 		}
 		return retval;
@@ -68,39 +72,11 @@ public class PhysicsFrame extends JFrame {
     }
   }
 
-	// public double[] calcFinal(double[] sva, double t){
-	// 	double[] retval = new double[3];
-	// 	for(int i = 0; i<sva.length/3; i++){
-	// 		retval[i] = sva[(3*i)] + (sva[(3*i)+1]*t) + (0.5*sva[(3*i)+2]*Math.pow(t,2));
-	// 	}
-	// 	return retval;
-	// }
-
   public PhysicsFrame() {
     setSize(800, 600);
     setBackground(Color.WHITE);
   }
 
-  /**
-    Defining the background
-  **/
-  // public void init() {
-  //   setSize(600, 400);
-  //   setBackground(Color.WHITE);
-  //   updateTime();
-  //   repaint();
-  // }
-
-  // public void updateTime() {
-  //   System.out.println("time since start = " + (t-timeZero));
-  //   if((t - timeZero) != (System.currentTimeMillis()/1000) - timeZero){
-  //     t = System.currentTimeMillis()/1000 - timeZero;
-  //   }
-  //   repaint();
-  // }
-  /**
-    Drawing the flag
-  **/
   public void paint(Graphics g) {
     g.setColor(Color.WHITE);
     g.fillRect(0, 0, 10000, 10000);

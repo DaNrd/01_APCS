@@ -5,10 +5,15 @@ This project takes a base in the form of a double and a power in the form of an 
 ### Errors
 
 At first I was getting an error for odd exponents but that was fixed by multiplying the answer by 3 again.
+
 Test Cases:
+
 	✓ 0.5^2
+
 	✓ 3^7
+
 	✓ 0.4173^2
+
 Still thinking about how to approach decimal exponents.
 
 ### Code Overview

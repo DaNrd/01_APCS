@@ -22,4 +22,4 @@ How to treat odd exponents - solved (multiply the base by base^2((power-1)/2))
 
 ## Built With
 
-* [[Exponentiation by Squaring]]([https://en.wikipedia.org/wiki/Exponentiation_by_squaring#Basic_method]) - [explanation of squaring used to check my thought process]
+* [Exponentiation by Squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring#Basic_method) - explanation of squaring used to check my thought process

@@ -5,14 +5,23 @@ This app is a game where one tries to avoid enemies (called Mho's) by moving on 
 ### Controls
 
 W - up
+
 X - down
+
 A - left
+
 D - right
+
 Q - up and to the left
+
 E - up and to the right
+
 Z - down and to the left
+
 C - down and to the right
+
 S - stay where you are
+
 J - jump to a random square
 
 ### Errors
@@ -22,14 +31,19 @@ Currently unsure if the npc movement is correct (regarding diagonals vs minimizi
 ### Code Overview
 
 Main.Java
+
 	- Controls movement via keyboard
+
 	- Makes instance of GameFrame.java
 
 GameFrame.java
+
 	- Draws char, mhos, and fences redrawing after every move
+
 	- Calculates score and whether player is winning or not
 
 Npc.java
+
 	- Controls mho movements
 
 ### Major Challenges

@@ -1,4 +1,4 @@
-# [Project Name]
+# Project Name
 
 [desc and how fulfills reqs]
 
@@ -20,4 +20,4 @@
 
 ## Built With
 
-* [[link title]]([link]) - [desc of link]
+* [link title](link]) - desc of link

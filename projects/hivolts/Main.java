@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 
-public class Main extends JFrame implements KeyListener {
+public class Main extends JFrame implements KeyListener { // written by aaron
     private GameFrame draw;
     private String[] thing = {"Hey there, how's life. This value is used but not actually useful so I thought I'd just say hi! :)"};
 

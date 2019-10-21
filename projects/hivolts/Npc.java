@@ -1,4 +1,5 @@
 public class Npc {
+    // Npc written by Josh; checked and edited by Aaron
     // This class deals with Mhos. It stores Mho locations as int fields, alive status as a bool, and movement as methods.
     int xpos;
     int ypos;

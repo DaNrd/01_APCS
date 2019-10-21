@@ -4,6 +4,9 @@ import javax.swing.JComponent;
 import java.lang.Math;
 
 public class GameFrame extends JComponent{
+    //GameFrame written by Aaron and Josh (methods written and edited to the point
+    //where it doesnt make sense to attribute any one part to on author.
+    //Checked by Ivory
     public static int x = 1; // x loc of player on 12 by 12 grid
     public static int y = 1; // y loc of player on 12 by 12 grid
     public double scale; // for resizeability
@@ -27,7 +30,7 @@ public class GameFrame extends JComponent{
         if (alive == true){ // when round completes and player is still alive
             roundNum++; // increase the round number by 1
         } else { // when round completes and player is dead
-            roundNum = 1; // reset round counter
+            roundNum = 0; // reset round counter
             score = 0; // reset score
         }
         message = "Round: " + roundNum + " Score: " + score; // for win / lose message
@@ -170,7 +173,7 @@ public class GameFrame extends JComponent{
     }
 
     public void findNpcs() { // npc moves and check how many npcs died
-         int oldDeadMho;
+        int oldDeadMho;
         if(deadMho != npcLoc.length){ //Still playing same round
             oldDeadMho = deadMho;
         } else { // New round started

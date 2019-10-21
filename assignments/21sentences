@@ -89,3 +89,51 @@ Vocabulary 5
 	tree recursion has a higher order of growth than linear recursion when given the same input
 	when dealing with tree recursion, printing a final value or final list of values is often more aligned with proper data abstraction than printing every returned value
 	for proper data abstraction, it is unlikely that one would print all returned values of a function with a high order of growth
+
+Vocabulary 6
+	polymorphism interface							-
+	polymorphism base class							-
+	polymorphism subclass								-
+	polymorphism superclass							-
+	polymorphism reference							-
+	polymorphism inheritance hierarchy	-
+	interface base class								-
+	interface subclass									-
+	interface superclass								-
+	interface reference									-
+	interface inheritance hierarchy			-
+	base class subclass									-
+	base class superclass								-
+	base class reference								-
+	base class inheritance hierarchy		-
+	subclass superclass									-
+	subclass reference									-
+	subclass inheritance hierarchy			-
+	superclass reference								-
+	superclass inheritance hierarchy		-
+	reference inheritance hierarchy			-
+
+Vocabulary 7
+	Invariant
+	Representation
+	Algorithm
+	Compile
+	Interpret
+	Virtual
+	Indirection
+Vocabulary 8
+	Object method
+	class method
+	this (keyword)
+	implicit (variable)
+	explicit (variable)
+	edge (graph)
+	node (graph)
+Vocabulary 9
+	graph
+	lowest common ancestor
+	acyclic graph
+	partition (graph)
+	leaf (tree (graph))
+	root (tree (graph))
+	search (tree)

@@ -52,4 +52,6 @@ One major challenge I came across was generalizing the mho code. With help from 
 
 ### Acknowledgments
 
-* [@jathayde314](https://github.com/jathayde314) - for help with the mhos
+* [@Ivory Tang](mailto:ivoryttang@gmail.com) - helped with npc movement functions and GameFrame
+* [@Josh Athyde](https://github.com/jathayde314) - wrote the npc movement functions and helped with GameFrame
+* [@Jasmine Kapadia](https://github.com/jk26966) - worked on sprites and checked other code

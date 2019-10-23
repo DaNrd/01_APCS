@@ -91,49 +91,100 @@ Vocabulary 5
 	for proper data abstraction, it is unlikely that one would print all returned values of a function with a high order of growth
 
 Vocabulary 6
-	polymorphism interface							-
-	polymorphism base class							-
-	polymorphism subclass								-
-	polymorphism superclass							-
-	polymorphism reference							-
-	polymorphism inheritance hierarchy	-
-	interface base class								-
-	interface subclass									-
-	interface superclass								-
-	interface reference									-
-	interface inheritance hierarchy			-
-	base class subclass									-
-	base class superclass								-
-	base class reference								-
-	base class inheritance hierarchy		-
-	subclass superclass									-
-	subclass reference									-
-	subclass inheritance hierarchy			-
-	superclass reference								-
-	superclass inheritance hierarchy		-
-	reference inheritance hierarchy			-
+	polymorphism					- ability to treat an object of any subclass as an object of that subclasses base class (eg: chocolateMilk extends milk (also inherits liquid properties))
+	interface							- communication between multiple different objects
+	base class						- class that contains subclasses (root of inheritance tree)
+	subclass							- class that inherits properties from a base class
+	superclass						- class that subclass inherits from
+	reference							- a value that allows a computer to access data indirectly
+	inheritance hierarchy	- tree style hierarchy with subclasses stemming from superclasses stemming from a base class
+	polymorphism interface							- in polymorphism, interfaces are inherited by subclasses from superclasses but unique features can be added to the subclasses
+	polymorphism base class							- in polymorphism, extending a base class or a subclass of that base class both results in the features of the base class being extended to the new class
+	polymorphism subclass								- in polymorphism, a subclass of a subclass also inherits the properties of the original subclasses superclass
+	polymorphism superclass							- in polymorphism, superclasses extend their properties to their respective subclasses
+	polymorphism reference							- in polymorphism, if a subclass hides a public instance variable of its superclass then the subclasses of that subclass will not be able to reference that public instance variable
+	polymorphism inheritance hierarchy	- in polymorphism, inheritance hierarchy starts with a base class which has subclasses branching off
+	interface base class								- any interfaces present in a base class will be inherited through its subclasses
+	interface subclass									- interfaces are inherited by subclasses and can be added to in those subclasses without affecting the base class's interfaces
+	interface superclass								- interfaces added in a subclass are not accessible by that classes superclass
+	interface reference									- if a superclass hides one of it's superclasses public instance variables, any subclasses of that subclass also will not be able to reference that variable
+	interface inheritance hierarchy			- interfaces are inherited through the inheritance hierarchy
+	base class subclass									- a subclass of a base class inherits all properties of that base class
+	base class superclass								- base classes, by definition, have no superclass
+	base class reference								- references can be used to access data stored in a base class
+	base class inheritance hierarchy		- base classes are the root of the inheritance hierarchy
+	subclass superclass									- subclasses inherit properties from their superclasses
+	subclass reference									- subclasses can reference data from their superclasses
+	subclass inheritance hierarchy			- in inheritance hierarchy, subclasses inherit from their superclasses
+	superclass reference								- superclasses cannot reference from their subclasses
+	superclass inheritance hierarchy		- superclasses are higher up on the inheritance hierarchy
+	reference inheritance hierarchy			- classes further down on the inheritance hierarchy can reference data from their superclasses
 
 Vocabulary 7
-	Invariant
-	Representation
-	Algorithm
-	Compile
-	Interpret
-	Virtual
-	Indirection
+	Invariant Representation						-
+	Invariant Algorithm									-
+	Invariant Compile										-
+	Invariant Interpret									-
+	Invariant Virtual										-
+	Invariant Indirection								-
+	Representation Algorithm						-
+	Representation Compile							-
+	Representation Interpret						-
+	Representation Virtual							-
+	Representation Indirection					-
+	Algorithm Compile										-
+	Algorithm Interpret									-
+	Algorithm Virtual										-
+	Algorithm Indirection								-
+	Compile Interpret										-
+	Compile Virtual											-
+	Compile Indirection									-
+	Interpret Virtual										-
+	Interpret Indirection								-
+	Virtual Indirection									-
+
 Vocabulary 8
-	Object method
-	class method
-	this (keyword)
-	implicit (variable)
-	explicit (variable)
-	edge (graph)
-	node (graph)
+	Object method class method					-
+	object method this									-
+	object method implicit variable			-
+	object method explicit variable			-
+	object method edge (graph)					-
+	object method node (graph)					-
+	class method this										-
+	class method implicit variable			-
+	class method explicit variable			-
+	class method edge (graph)						-
+	class method node (graph)						-
+	this implicit variable							-
+	this explicit variable							-
+	this edge (graph)										-
+	this node (graph)										-
+	implicit variable explicit variable -
+	implicit variable edge (graph)			-
+	implicit variable node (graph)			-
+	explicit variable edge (graph)			-
+	explicit variable node (graph)			-
+	edge (graph) node (graph)						-
+
 Vocabulary 9
-	graph
-	lowest common ancestor
-	acyclic graph
-	partition (graph)
-	leaf (tree (graph))
-	root (tree (graph))
-	search (tree)
+	graph lowest common ancestor							-
+	graph acyclic graph												-
+	graph partition														-
+	graph leaf																-
+	graph root																-
+	graph search															-
+	lowest common ancestor acyclic graph			-
+	lowest common ancestor partition (graph)	-
+	lowest common ancestor leaf								-
+	lowest common ancestor root								-
+	lowest common ancestor search							-
+	acyclic graph partition										-
+	acyclic graph leaf												-
+	acyclic graph root												-
+	acyclic graph search											-
+	partition leaf														-
+	partition root														-
+	partition search													-
+	leaf root																	-
+	leaf search																-
+	root search																-

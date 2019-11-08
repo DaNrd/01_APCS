@@ -63,6 +63,7 @@ public class GameFrame extends JComponent {
     public int jumpy = 0; // y loc of player before a jump
     public Clip clip; // sound
     public int rotate = 0;
+    public int playerDirection = 0;
 
     public void init() { // called when game starts
         roundOver = false;
@@ -358,7 +359,15 @@ public class GameFrame extends JComponent {
     private void drawPlayer(Graphics g) {  //draws player
         final double px = pos2Coord(playerInstance.x), py = pos2Coord(playerInstance.y);
         Graphics2D g2 = (Graphics2D) g;
-        g2.drawImage(CharFront, (int)px, (int)py, (int)scale, (int)scale, this);
+        if(playerDirection == 0) {
+            g2.drawImage(CharFront, (int)px, (int)py, (int)scale, (int)scale, this);
+        } else if(playerDirection == 1){
+            g2.drawImage(CharRight, (int)px, (int)py, (int)scale, (int)scale, this);
+        } else if(playerDirection == 2){
+            g2.drawImage(CharLeft, (int)px, (int)py, (int)scale, (int)scale, this);
+        } else {
+            g2.drawImage(CharBack, (int)px, (int)py, (int)scale, (int)scale, this);
+        }
     }
 
     public void drawMho(Graphics g, int x, int y) {

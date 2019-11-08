@@ -57,33 +57,43 @@ public class Hivolts extends JFrame implements KeyListener, ActionListener { // 
             }
         } else {
                 if (e.getKeyCode() == KeyEvent.VK_D) {
+                    draw.playerDirection = 1;
                     draw.playerInstance.moveRight(draw.objectLocations);
                     draw.updateGameState();
                 } else if (e.getKeyCode() == KeyEvent.VK_A) {
+                    draw.playerDirection = 2;
                     draw.playerInstance.moveLeft(draw.objectLocations);
                     draw.updateGameState();
                 } else if (e.getKeyCode() == KeyEvent.VK_X) {
+                    draw.playerDirection = 0;
                     draw.playerInstance.moveDown(draw.objectLocations);
                     draw.updateGameState();
                 } else if (e.getKeyCode() == KeyEvent.VK_W) {
+                    draw.playerDirection = 3;
                     draw.playerInstance.moveUp(draw.objectLocations);
                     draw.updateGameState();
                 } else if (e.getKeyCode() == KeyEvent.VK_Q) {
+                    draw.playerDirection = 2;
                     draw.playerInstance.moveUpLeft(draw.objectLocations);
                     draw.updateGameState();
                 } else if (e.getKeyCode() == KeyEvent.VK_E) {
+                    draw.playerDirection = 1;
                     draw.playerInstance.moveUpRight(draw.objectLocations);
                     draw.updateGameState();
                 } else if (e.getKeyCode() == KeyEvent.VK_Z) {
+                    draw.playerDirection = 2;
                     draw.playerInstance.moveDownLeft(draw.objectLocations);
                     draw.updateGameState();
                 } else if (e.getKeyCode() == KeyEvent.VK_C) {
+                    draw.playerDirection = 1;
                     draw.playerInstance.moveDownRight(draw.objectLocations);
                     draw.updateGameState();
                 } else if (e.getKeyCode() == KeyEvent.VK_S) {
+                    draw.playerDirection = 0;
                     draw.playerInstance.stay();
                     draw.updateGameState();
                 } else if (e.getKeyCode() == KeyEvent.VK_J) {
+                    draw.playerDirection = 0;
                     draw.objectLocations = draw.playerInstance.jump(draw.objectLocations);
                     draw.setMessage();
                     draw.repaint();

@@ -1,9 +1,16 @@
 Vocabulary 2
+	exception				- a break in the flow of code, often used to help locate errors
+	iterator				- used to repeatedly run a task (eg, incrementing i in a for loop)
+	branch					-
+	pointer					-
+	tree						-
+	sine function		-
+	complex Number	-
 	during iteration, an exception can be used to find which iterator value is causing the code to break
 	during branch processing, an exception can give insight as to which branch process is the one that broke
 	when exceptions are thrown, pointers given in the exception can lead the programmers focus to find which items broke the code
 	if a top level class in a tree throws an exception, any sub-class for that class will likely also throw exceptions
-	in a sin function, the most common reason that an exception would be thrown for beginner programers would be leaving out the MathtoRadian()
+	in a sine function, the most common reason that an exception would be thrown for beginner programers would be leaving out the MathtoRadian()
 	if a complex number is required, and the coefficient of i is 0, an exception will be thrown
 	if you want to do iteration across multiple branches, you should use different iterator variables so as to not confuse the compiler
 	during for loop iteration, the variable i (used to control amount of iterations) can also be used as a pointer for an item in an array or a character in a string
@@ -22,6 +29,13 @@ Vocabulary 2
 	the output of a sin function will never be a complex number
 
 Vocabulary 3
+	dynamic scope		-
+	stack						-
+	function scope	-
+	block scope			-
+	lexical scope		-
+	global variable	-
+	namespace				-
 	if a variable called in a function cannot be located in that function, it is searched for in the last function from the stack
 	if a variable called in a function cannot be located in the function's scope, the scope of the function that called the original function is searched
 	if a variable is not defined within a block, the scope of the outer function / block is scoped in dynamic scoping
@@ -39,12 +53,19 @@ Vocabulary 3
 	namespaces such as Math can be used within functions to call functions that are not defined within the function's scope
 	in lexical scoping, if a var isn't located within a block's scope, it is searched for in the global scope
 	a global var can be referenced within any block, even if it is outside of the block's scope
-	namespace functions (eg: Mathsin()) can be called in any block regardless of whether or not the function is defined within the block's scope
+	namespace functions (eg: Math.sin()) can be called in any block regardless of whether or not the function is defined within the block's scope
 	lexical scoping is not needed to find global variables because they can be referenced from anywhere
 	lexical scoping is not needed to use namespace functions because they can be referenced from anywhere
 	namespaces are similar to global variables in that any variables or functions defined in the namespace can be called/referenced from anywhere
 
 Vocabulary 4
+	object					-
+	constructor			-
+	class						-
+	instance				-
+	attribute				-
+	accessor method	-
+	modifier method	-
 	a constructor is a function that sets the value of the variables contained in a class
 	an object is an instance of a class with specific variables (eg: class automobile, object car is class automobile with height 13m)
 	an object is an instance of a class with specific attributes
@@ -68,6 +89,13 @@ Vocabulary 4
 	accessor methods get values while modifier methods set them
 
 Vocabulary 5
+	expression				-
+	primitive					-
+	conditional				-
+	linear recursion	-
+	tree recursion		-
+	order of growth		-
+	data abstraction	-
 	expressions can be used to assign values to primitives
 	expressions are often used to trigger a conditional statement
 	expressions are often used within linear recursion to modify the input in some way
@@ -90,7 +118,7 @@ Vocabulary 5
 	when dealing with tree recursion, printing a final value or final list of values is often more aligned with proper data abstraction than printing every returned value
 	for proper data abstraction, it is unlikely that one would print all returned values of a function with a high order of growth
 
-Vocabulary 6
+Vocabulary 6 http://www.artima.com/objectsandjava/webuscript/PolymorphismInterfaces1.html
 	polymorphism					- ability to treat an object of any subclass as an object of that subclasses base class (eg: chocolateMilk extends milk (also inherits liquid properties))
 	interface							- communication between multiple different objects
 	base class						- class that contains subclasses (root of inheritance tree)
@@ -121,6 +149,13 @@ Vocabulary 6
 	reference inheritance hierarchy			- classes further down on the inheritance hierarchy can reference data from their superclasses
 
 Vocabulary 7
+	Invariant				-
+	Representation	-
+	Algorithm				-
+	Compile					-
+	Interpret				-
+	Virtual					-
+	Indirection
 	Invariant Representation						-
 	Invariant Algorithm									-
 	Invariant Compile										-
@@ -144,47 +179,61 @@ Vocabulary 7
 	Virtual Indirection									-
 
 Vocabulary 8
-	Object method class method					-
-	object method this									-
-	object method implicit variable			-
-	object method explicit variable			-
-	object method edge (graph)					-
-	object method node (graph)					-
-	class method this										-
-	class method implicit variable			-
-	class method explicit variable			-
-	class method edge (graph)						-
-	class method node (graph)						-
-	this implicit variable							-
-	this explicit variable							-
-	this edge (graph)										-
-	this node (graph)										-
-	implicit variable explicit variable -
-	implicit variable edge (graph)			-
-	implicit variable node (graph)			-
-	explicit variable edge (graph)			-
-	explicit variable node (graph)			-
-	edge (graph) node (graph)						-
+	object method				- Obj.method
+	class method				- method()
+	this (keyword)			- specifies local
+	implicit						- Object.implicit
+	explicit						- Object.function(explicit)
+	edge (graph)				- path that connects nodes
+	node (graph)				- location in graph where something exists
+	Object method class method					- unlike calling a class method, the object must be included in the call statement of an object method
+	object method this									- when calling an object method, the "this" keyword references the values of variables from the current object
+	object method implicit variable			- implicit variables are used to reference object methods
+	object method explicit variable			- explicit variables are used as arguments for object methods
+	object method edge (graph)					- an object method could act as an edge to an object by returning that object
+	object method node (graph)					- an object method could be considered a sub-node of an object
+	class method this										- class methods do not require the "this" keyword because they act the same way for all instances of the class
+	class method implicit variable			- class methods can be invoked with implicit parameters as long as they are of type void
+	class method explicit variable			- class methods often are invoked with explicit parameters which are then used in some way by the method
+	class method edge (graph)						- class methods can act as an edge by creating new object instances
+	class method node (graph)						- class methods are sub-nodes of their classes
+	this implicit variable							- the this keyword is used to reference an implicit parameter such as the object calling a method
+	this explicit variable							- the this keyword is not used to reference explicit parameters
+	this edge (graph)										- the this keyword acts as an edge to the current object
+	this node (graph)										- the this keyword connects the node representing the current method to the node representing the current object
+	implicit variable explicit variable - implicit parameters are determined based on the languages syntax while explicit parameters are given by the programmer
+	implicit variable edge (graph)			- implicit parameters can act as edges by linking the active method to the object used to call the method
+	implicit variable node (graph)			- implicit parameters can act as nodes in a hierarchy of classes (since they are often objects)
+	explicit variable edge (graph)			- explicit parameters can act as edges by passing a value to a method through arguments
+	explicit variable node (graph)			- explicit parameters can be thought of as nodes in a hierarchy of variables
+	edge (graph) node (graph)						- edges are the paths that connect 2 nodes in a graph
 
 Vocabulary 9
-	graph lowest common ancestor							-
-	graph acyclic graph												-
-	graph partition														-
-	graph leaf																-
-	graph root																-
-	graph search															-
-	lowest common ancestor acyclic graph			-
-	lowest common ancestor partition (graph)	-
-	lowest common ancestor leaf								-
-	lowest common ancestor root								-
-	lowest common ancestor search							-
-	acyclic graph partition										-
-	acyclic graph leaf												-
-	acyclic graph root												-
-	acyclic graph search											-
-	partition leaf														-
-	partition root														-
-	partition search													-
-	leaf root																	-
-	leaf search																-
-	root search																-
+	graph										- multiple nodes with edges connecting them
+	lowest common ancestor	- a sub-node for both nodes that contains the fewest accessible nodes
+	acyclic graph						- graph with no cycle paths (loops, start at node 'a' and get back to a without going backwards)
+	partition								- self-contained subset of a graph
+	leaf										- nodes with no sub-nodes
+	root										- nodes with sub-nodes
+	search									- going through a graph to find a specific node
+	graph lowest common ancestor							- in a tree graph, the lowest common ancestor is the shared sub-node with the fewest super-nodes
+	graph acyclic graph												- in an acyclic graph, it is not possible to start at a node, follow a path, and return to the same node
+	graph partition														- a partition is a self-contained subset of a graph
+	graph leaf																- in a tree graph, a leaf is an outermost sub-node that has no sub-nodes of its own
+	graph root																- in a tree graph, a root is the highest super-node with no super-nodes of its own
+	graph search															- searching is when the computer looks through a graph to find a specific node
+	lowest common ancestor acyclic graph			- acyclic graphs have lowest common ancestors because the nodes cannot lead back to themselves meaning there is a linear hierarchy
+	lowest common ancestor partition (graph)	- in acyclic graphs, each partition can have their own lowest common ancestor
+	lowest common ancestor leaf								- a leaf node is never the lowest common ancestor
+	lowest common ancestor root								- the root is often the lowest common ancestor of two or more nodes
+	lowest common ancestor search							- the lowest common ancestor of two or more nodes can be found with a search function
+	acyclic graph partition										- in an acyclic graph, each partition is acyclic
+	acyclic graph leaf												- the outermost nodes of an acyclic graph are known as its leaf nodes
+	acyclic graph root												- the lowest common ancestor of a partition in an acyclic graph is known as a root node (there can be multiple)
+	acyclic graph search											- acyclic graphs are easier to search because of the lack of looping
+	partition leaf														- in an acyclic graph, each partition has its own leaf nodes
+	partition root														- in an acyclic graph, each partition has its own root nodes
+	partition search													- if you run a search in one partition, it cannot search the other partitions because they are isolated from each other
+	leaf root																	- leaf and root nodes are both located on the extremity of a graph
+	leaf search																- when starting at the leaf node, a search would likely end at the root node
+	root search																- when starting at the root node, a search function can search any of its sub-node groups

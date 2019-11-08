@@ -24,11 +24,11 @@ public class Hivolts extends JFrame implements KeyListener, ActionListener { // 
 
     public void keyReleased(KeyEvent e) { // records keystrokes
         if (draw.titleScreen == true) {
+            draw.titleScreen = false;
             if (e.getKeyCode() == KeyEvent.VK_C) {
                 draw.creditsScreen = true;
                 draw.repaint();
             } else {
-                draw.titleScreen = false;
                 draw.storyScreen = true;
                 draw.init();
                 draw.repaint();

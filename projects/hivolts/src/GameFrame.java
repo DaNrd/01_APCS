@@ -111,8 +111,6 @@ public class GameFrame extends JComponent {
         g.setColor(BLINKBLUE);
         g.setFont(new Font("TimesRoman", Font.PLAIN, (int) (scale * 1)));
         g.drawString("Press any key to continue:", (int) (scale * 2), (int) (scale * 12.5));
-        g.setFont(new Font("TimesRoman", Font.PLAIN, (int)(scale*0.5)));
-        g.drawString("Or press c for credits:", (int) (scale*5), (int)(scale * 13.5));
     }
 
     public void drawTitleScreen(Graphics g){
@@ -121,6 +119,8 @@ public class GameFrame extends JComponent {
             drawTitleScreenTitle(g);
             drawIntroCharacters(g);
             drawNextScreenControls(g);
+            g.setFont(new Font("TimesRoman", Font.PLAIN, (int)(scale*0.5)));
+            g.drawString("Or press c for credits:", (int) (scale*5), (int)(scale * 13.5));
         }
     }
 

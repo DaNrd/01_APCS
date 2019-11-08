@@ -2,6 +2,8 @@
 
 This app is a game where one tries to avoid enemies (called Mho's) by moving on a grid and avoiding electric fences. It was a team effort between [Ivory Tang](mailto:ivoryttang@gmail.com), [Josh Athayde](https://github.com/jathayde314), [Jasmine Kapadia](https://github.com/jk26966), and myself.
 
+A playable jar file can be downloaded [here](https://github.com/DaNrd/01_APCS/releases/tag/1.0) and run with ```java -jar Hivolts.jar``` in the directory containing the jar file.
+
 ### Controls
 
 W - up

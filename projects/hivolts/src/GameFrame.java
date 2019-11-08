@@ -196,7 +196,7 @@ public class GameFrame extends JComponent {
             g.drawString("Graphics:", (int)(scale * 8), (int) (scale * 5.5));
             g.drawString("Music:", (int)(scale * 8), (int) (scale * 8.75));
             g.setFont(new Font("TimesRoman", Font.PLAIN, (int) (scale * 0.5)));
-            g.drawString("Joshua Athyde", (int)(scale * 1.5), (int) (scale * 6.25));
+            g.drawString("Joshua Athayde", (int)(scale * 1.5), (int) (scale * 6.25));
             g.drawString("Aaron Campbell", (int)(scale * 1.5), (int) (scale * 7));
             g.drawString("Jasmine Kapadia", (int)(scale * 1.5), (int) (scale * 7.75));
             g.drawString("Ivory Tang", (int)(scale * 1.5), (int) (scale * 8.5));

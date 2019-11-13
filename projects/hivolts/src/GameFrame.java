@@ -1,6 +1,4 @@
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.io.*;
 import java.lang.*;
 import javax.swing.*;
@@ -115,26 +113,22 @@ public class GameFrame extends JComponent {
     }
 
     public void drawTitleScreen(Graphics g){
-        if(titleScreen == true) {
-            drawBackground(g);
-            drawTitleScreenTitle(g);
-            drawIntroCharacters(g);
-            drawNextScreenControls(g);
-            g.setFont(new Font("TimesRoman", Font.PLAIN, (int)(scale*0.5)));
-            g.drawString("Or press c for credits:", (int) (scale*5), (int)(scale * 13.5));
-        }
+        drawBackground(g);
+        drawTitleScreenTitle(g);
+        drawIntroCharacters(g);
+        drawNextScreenControls(g);
+        g.setFont(new Font("TimesRoman", Font.PLAIN, (int)(scale*0.5)));
+        g.drawString("Or press c for credits:", (int) (scale*5), (int)(scale * 13.5));
     }
 
     public void drawStoryScreen(Graphics g){
-        if(storyScreen == true){
-            drawBackground(g);
-            g.setColor(COOLBLUE); //
-            g.setFont(new Font("TimesRoman", Font.PLAIN, (int) (scale * 2.5)));
-            g.drawString("Story:", (int) (scale * 4.5), (int) scale * 2); //Title of Story screen
-            drawStorySpeech(g);
-            drawTurntable(g); //Rotating sprites
-            drawNextScreenControls(g);
-        }
+        drawBackground(g);
+        g.setColor(COOLBLUE); //
+        g.setFont(new Font("TimesRoman", Font.PLAIN, (int) (scale * 2.5)));
+        g.drawString("Story:", (int) (scale * 4.5), (int) scale * 2); //Title of Story screen
+        drawStorySpeech(g);
+        drawTurntable(g); //Rotating sprites
+        drawNextScreenControls(g);
     }
 
     public void drawTurntable(Graphics g){
@@ -159,31 +153,38 @@ public class GameFrame extends JComponent {
         g.setFont(new Font("TimesRoman", Font.PLAIN, (int) (scale * 1.5)));
         g.drawString("Controls:", (int) (scale*4), (int) (scale * 1.5));
     }
+    
+    public void drawPlayerVictory(Graphics g){
+        drawBackground(g);
+        g.setColor(COOLBLUE);
+        g.setFont(new Font("TimesRoman", Font.PLAIN, (int) (scale * 1.5)));
+        Graphics2D g2 = (Graphics2D) g;
+        g.drawString("You Won!", (int) (scale*3.5), (int) (scale * 1.5));
+        g2.drawImage(CharWin, (int) scale * 5, (int) scale * 5, (int) scale * 4, (int) scale * 4, this);
+        g.setColor(BLINKBLUE);
+        g.setFont(new Font("TimesRoman", Font.PLAIN, (int)(scale)));
+        g.drawString("Press any button to continue:", (int) (scale*1.5), (int)(scale * 12));
+        drawRoundOverInstructions(g);
+    }
+    
+    public void drawPlayerLoss(Graphics g){
+        drawBackground(g);
+        g.setColor(COOLBLUE);
+        g.setFont(new Font("TimesRoman", Font.PLAIN, (int) (scale * 1.5)));
+        Graphics2D g2 = (Graphics2D) g;
+        g.drawString("You Died!", (int) (scale*4), (int) (scale * 1.5));
+        g2.drawImage(MhoEat, (int) scale * 5, (int) scale * 5, (int) scale * 4, (int) scale * 4, this);
+        g.setColor(BLINKBLUE);
+        g.setFont(new Font("TimesRoman", Font.PLAIN, (int)(scale)));
+        g.drawString("Press any button to restart:", (int) (scale*2), (int)(scale * 12));
+        drawRoundOverInstructions(g);
+    }
 
-    public void drawRoundOver(Graphics g){
-        if(roundOver == true){ //roundOver true when round over
-            drawBackground(g);
-            g.setColor(COOLBLUE);
-            g.setFont(new Font("TimesRoman", Font.PLAIN, (int) (scale * 1.5)));
-            Graphics2D g2 = (Graphics2D) g;
-            if(playerInstance.alive == true){
-                g.drawString("You Won!", (int) (scale*3.5), (int) (scale * 1.5));
-                g2.drawImage(CharWin, (int) scale * 5, (int) scale * 5, (int) scale * 4, (int) scale * 4, this);
-                g.setColor(BLINKBLUE);
-                g.setFont(new Font("TimesRoman", Font.PLAIN, (int)(scale)));
-                g.drawString("Press any button to continue:", (int) (scale*1.5), (int)(scale * 12));
-            } else {
-                g.drawString("You Died!", (int) (scale*4), (int) (scale * 1.5));
-                g2.drawImage(MhoEat, (int) scale * 5, (int) scale * 5, (int) scale * 4, (int) scale * 4, this);
-                g.setColor(BLINKBLUE);
-                g.setFont(new Font("TimesRoman", Font.PLAIN, (int)(scale)));
-                g.drawString("Press any button to restart:", (int) (scale*2), (int)(scale * 12));
-            }
-            g.setColor(COOLBLUE);
-            g.setFont(new Font("TimesRoman", Font.PLAIN, (int)(scale*0.5)));
-            g.drawString(message, (int)(3*scale), (int)(3*scale));
-            g.drawString("Press Esc to go back to the Main Menu:", (int) (scale*3), (int)(scale * 13.5));
-        }
+    public void drawRoundOverInstructions(Graphics g){
+          g.setColor(COOLBLUE);
+          g.setFont(new Font("TimesRoman", Font.PLAIN, (int)(scale*0.5)));
+          g.drawString(message, (int)(3*scale), (int)(3*scale));
+          g.drawString("Press Esc to go back to the Main Menu:", (int) (scale*3), (int)(scale * 13.5));
     }
 
     public void drawCreditsScreen(Graphics g){
@@ -229,8 +230,8 @@ public class GameFrame extends JComponent {
         g.setFont(new Font("TimesRoman", Font.PLAIN, (int) (scale * 0.4)));
         g.drawString("W : move up", (int)(scale * 5), (int) (scale * 3));
         g.drawString("A : move left", (int)(scale * 5), (int) (scale * 3.75));
-        g.drawString("S : move down", (int)(scale * 5), (int) (scale * 4.5));
-        g.drawString("D : move right", (int)(scale * 5), (int) (scale * 5.25));
+        g.drawString("D : move right", (int)(scale * 5), (int) (scale * 4.5));
+        g.drawString("X : move down", (int)(scale * 5), (int) (scale * 5.25));
         g.drawString("Q : move up and to the left", (int)(scale * 5), (int) (scale * 6));
         g.drawString("E : move up and to the right", (int)(scale * 5), (int) (scale * 6.75));
         g.drawString("Z : move down and to the left", (int)(scale * 5), (int) (scale * 7.5));
@@ -248,13 +249,11 @@ public class GameFrame extends JComponent {
     }
 
     public void drawControlsPage(Graphics g){
-        if(controlsScreen == true){
-            drawBackground(g);
-            drawInstructionScreenTitle(g);
-            drawTurntable(g);
-            drawControls(g);
-            drawPressKeyToBegin(g);
-        }
+        drawBackground(g);
+        drawInstructionScreenTitle(g);
+        drawTurntable(g);
+        drawControls(g);
+        drawPressKeyToBegin(g);
     }
 
     public void playThemeMusic(){ // called in Hivolts.initializeHivolts, plays theme song
@@ -410,10 +409,13 @@ public class GameFrame extends JComponent {
 
     public void paintComponent(Graphics g) { // paint things!
         super.paintComponent(g);
-        if(titleScreen == true || controlsScreen == true || creditsScreen == true || storyScreen == true){
+        if(titleScreen == true){
             drawTitleScreen(g);
+        } else if (controlsScreen == true){
             drawControlsPage(g);
+        } else if (creditsScreen == true){
             drawCreditsScreen(g);
+        } else if (storyScreen == true){
             drawStoryScreen(g);
         } else {
             //draws black background
@@ -428,20 +430,28 @@ public class GameFrame extends JComponent {
             jumpAnimation(g);
             drawPlayer(g);
             drawMessage(g);
-
-            //"level up!! when player finishes a round"
-            if (allMhosDead()) {
-                drawRoundOver(g);
-            } else if (playerInstance.alive){
-                drawMoveCount(g);
+            drawMoveCount(g);
+            
+            if(allMhosDead()){
+                final int ONE_SECOND = 1000;
+                final Timer timer = new Timer(ONE_SECOND, actionEvent -> {
+                    drawPlayerVictory(g);
+                });
+                timer.setRepeats(false);
+                timer.start();
             } else if (playerInstance.alive == false){
-                drawRoundOver(g);
+                final int ONE_SECOND = 1000;
+                final Timer timer = new Timer(ONE_SECOND, actionEvent -> {
+                    drawPlayerLoss(g);
+                });
+                timer.setRepeats(false);
+                timer.start();
             }
         }
     }
 
     public void timerAction(){
-        if(BLINKBLUE == COOLBLUE){
+        if(BLINKBLUE == COOLBLUE){ //What is this??? Why are we equating colors?
             BLINKBLUE = BACKGROUND;
         } else {
             BLINKBLUE = COOLBLUE;

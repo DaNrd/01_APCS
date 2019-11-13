@@ -1,4 +1,4 @@
-public class Position {
+public class Position { //Just used for randomized lists
     int x;
     int y;
 

@@ -1,4 +1,4 @@
-public class MovePiece extends BoardPiece{
+public class MovePiece extends BoardPiece{ //Superclass for both Mho and Player
     boolean alive;
     BoardPiece[][] objectLocations;
 

@@ -1,0 +1,4 @@
+castling
+pawn to piece
+score
+win

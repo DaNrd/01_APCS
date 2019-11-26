@@ -1,0 +1,38 @@
+-- 4 Levels of Complexity --
+    Version 1:
+        - board with pieces
+        - mouse based movement
+    Version 2:
+        - checks for valid move
+        - kill pieces
+    Version 3:
+        - turn based
+        - castle
+    Version 4:
+        - check for check
+        - score
+        - animations?
+
+-- Fulfillment of Requirements --
+	#LinesOfCode:
+		-
+	#Classes:
+		-
+	#Methods:
+		-
+	depthOfClassHierarchy: (number of levels of subclass)
+		-
+	lexicalMethodCallDepth: (depth of function methods (method calls method calls method is 2))
+		-
+	dynamicMethodCallDepth: ("distance traveled on graph" try to find that is diff from lexical but not infinite)
+		-
+	complexityOfInter-MethodInteraction: (how complex the method calling other method flow is)
+		-
+	runTime: (how long the program runs)
+		-
+	rateOfGrowthOfRunTime: (how long the later programs run)
+		-
+	iterationNestingDepth: (maximum iteration order of growth)
+		-
+
+-- Plan --

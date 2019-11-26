@@ -1,0 +1,31 @@
+-- Possible Ideas --
+	- music recognition thing
+	- chicken run
+	- sudoku
+	- 
+
+-- 4 Levels of Complexity --
+
+-- Fulfillment of Requirements --
+	#LinesOfCode:
+		-
+	#Classes:
+		-
+	#Methods:
+		-
+	depthOfClassHierarchy: (number of levels of subclass)
+		-
+	lexicalMethodCallDepth: (depth of function methods (method calls method calls method is 2))
+		-
+	dynamicMethodCallDepth: ("distance traveled on graph" try to find that is diff from lexical but not infinite)
+		-
+	complexityOfInter-MethodInteraction: (how complex the method calling other method flow is)
+		-
+	runTime: (how long the program runs)
+		-
+	rateOfGrowthOfRunTime: (how long the later programs run)
+		-
+	iterationNestingDepth: (maximum iteration order of growth)
+		-
+
+-- Plan --

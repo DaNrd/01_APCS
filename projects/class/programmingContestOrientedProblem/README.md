@@ -30,11 +30,11 @@ https://drive.google.com/drive/folders/1DmP_xLq9Q9R6NvRzORA2AB4-SIVdU1Fl?usp=sha
 
 ## Project Description:
 
-I read the input with a scanner, processed it into multiple arrays (1 int[], 1 String[]), and put those arrays through functions that generated the solutions (as a double[]).
+I read the input with a scanner, processed it into an String array called input and put it through functions that prints the solutions.
 
 ### Errors
 
-No errors that I could find. Worked for the 8 given test cases.
+No errors that I could find. Worked for the 8 given test cases. (6/8 complete in less than 4 seconds)
 
 ### Code Overview
 

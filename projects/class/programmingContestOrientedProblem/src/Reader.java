@@ -6,24 +6,14 @@ import java.text.DecimalFormat;
 public class Reader {
     public String fileLoc; // path of file
     public int lineNum; // number of lines (starts at -1 for reasons)
-    public int n; // number of integers
-    public int q; // number of queries
     public String[] input;
-    public int[] integers;
-    public String[] queries;
-    public double[] solutions;
     public DecimalFormat df = new DecimalFormat("0.000");
 
     public void processInput() {
         fileLoc = locateFile();
         readFile();
-        setIntegers();
-        setQueries();
-        computeQueries();
         System.out.println("Solutions:");
-        for(int i = 0; i < q; i++) {
-            System.out.println(df.format(solutions[i])); // prints value rounded to fit 0.000 format (df)
-        }
+        computeQueries();
     }
 
     public String locateFile() {
@@ -65,26 +55,10 @@ public class Reader {
         }
     }
 
-    public void setIntegers() {
-        n = Integer.parseInt(input[0]); // sets n to first number
-        integers = new int[n];
-        for(int i = 0; i < n; i++) {
-            integers[i] = Integer.parseInt(input[i + 1]); // sets values of ArrayList "integers" by adding next n values after n
-        }
-    }
-
-    public void setQueries() {
-        q = Integer.parseInt(input[n+1]); // sets q to first number after first n + 1 lines
-        queries = new String[q];
-        for(int i = 0; i < q; i++) {
-            queries[i] = input[n + 2 + i];// sets string values of ArrayList "querries" by adding next q strings after q
-        }
-    }
-
     public void computeQueries() {
-        solutions = new double[q];
-        for(int i = 0; i < q; i++){ // to process all queries
-            String[] currentQuerry = queries[i].split(" "); // splits querry into 2 strings (split at space)
+        int qStart = Integer.parseInt(input[0])+1; // to skip first n+1 ints
+        for(int i = 0; i < Integer.parseInt(input[qStart]); i++){ // to process all queries
+            String[] currentQuerry = input[qStart + i + 1].split(" "); // splits querry into 2 strings (split at space)
             int a = Integer.parseInt(currentQuerry[0]); // first number of query
             int b = Integer.parseInt(currentQuerry[1]); // second number of querry
             average(i, a, b); // calculates the average between the two terms
@@ -94,8 +68,8 @@ public class Reader {
     public void average(int i, int a, int b) {
         double sol = 0; // starts solution value at 0
         for(int j = 0; j < (b - a + 1); j++) {
-            sol += integers[a + j - 1]; // adds the numbers between query values
+            sol += Integer.parseInt(input[a + j]); // adds the numbers between query values
         }
-        solutions[i] = sol/(b - a + 1);; // adds to solution ArrayList
+        System.out.println(df.format(sol/(b - a + 1))); // prints solution
     }
 }

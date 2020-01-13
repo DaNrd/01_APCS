@@ -1,0 +1,25 @@
+Exercise 3.1.
+    1:  | main [] |
+        | printTime [hour = 11]     |
+        |           [minute = 59]   |
+
+Exercise 3.2.
+    1:  No, I wug.
+        You wugga wug.
+        I wug.
+    2:  | main [    ] | at: 17
+        | zoop [    ] | at: 10
+        | baffle [  ] | at: 24
+        | ping [    ] | at: 27
+
+Exercise 3.3.
+    1:  zool(int a, String b, String c){}
+    2:  zool(11, "Striker", "Julia Ct.");
+
+Exercise 3.4.
+    1:  printAmerican(String day, int date, String month, int year){
+            System.out.println(day + ", " + month + " " + date + ", " + year);
+        }
+        printEuropean(String day, int date, String month, int year){
+            System.out.println(day + ", " + date + " " + month + ", " + year);
+        }

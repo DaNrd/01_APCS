@@ -1,0 +1,83 @@
+Exercise 4.1
+    main  [         ]
+    nLines[ n   [4] ]
+    nLines[ n   [3] ]
+    nLines[ n   [2] ]
+    nLines[ n   [1] ]
+    nLines[ n   [0] ]
+
+Exercise 4.2
+    1&2
+        public class Buzz {
+
+            public static void baffle(String blimp) {
+                System.out.println(blimp);                              4
+                zippo("ping", -5);                                      5
+            }
+
+            public static void zippo(String quince, int flag) {
+                if (flag < 0) {
+                    System.out.println(quince + " zoop");               6
+                } else {
+                    System.out.println("ik");                           2
+                    baffle(quince);                                     3
+                    System.out.println("boo-wa-ha-ha");                 7
+                }
+            }
+
+            public static void main(String[] args) {
+                zippo("rattle", 13);                                    1
+            }
+        }
+    3
+        "rattle"
+    4
+        ik
+        rattle
+        ping zoop
+        boo-wa-ha-ha
+
+Exercise 4.4
+        import java.lang.Math;
+        
+        public class BugsInTheCode {
+
+            public static void main(String[] args) {
+                int maxLength = 99;
+                sing(99, maxLength);
+            }
+
+            public static void sing(int number, int maxLength) {
+                if (number == 0) {
+                    System.out.println("No more little bugs in the code, no more little bugs! The tired developer patched them around or told his boss they were features!");
+                } else {
+                    int newNum = 0;
+                    if(maxLength > 2) {
+                        newNum = (int)(Math.random()*1001);
+                    }
+                    System.out.println(number + " little bugs in the code, " + number + " little bugs! Take one down and patch it around, " + newNum + " little bugs in the code");
+                    System.out.println("");
+                    maxLength--;
+                    sing(newNum, maxLength);
+                }
+            }
+        }
+
+Exercise 4.4
+    just for
+    any not more
+    It's breakfast
+    !
+
+Exercise 4.5
+    public void checkFermat(int a, int  b, int c, int n) {
+        if((raiseToPow(a,n) + raiseToPow(b,n)) == raiseToPow(c,n)) {
+            if(n > 2) {
+                System.out.println("Holy smokes, Fermat was wrong!");
+            } else {
+                System.out.println( “No, that doesn’t work.”);
+            }
+        } else {
+                System.out.println( “No, that doesn’t work.”);
+        }
+    }

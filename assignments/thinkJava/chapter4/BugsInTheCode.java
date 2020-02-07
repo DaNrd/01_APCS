@@ -15,7 +15,7 @@ import java.lang.Math;
                     if(maxLength > 2) {
                         newNum = (int)(Math.random()*1001);
                     }
-                    System.out.println(number + " little bugs in the code, " + number + " little bugs! Take one down and patch it around, " + newNum + " little bugs in the code");
+                    System.out.println(number + " little bugs in the code, " + number + " little bugs! Take one down and patch it around, " + newNum + " little bugs in the code.");
                     System.out.println("");
                     maxLength--;
                     sing(newNum, maxLength);

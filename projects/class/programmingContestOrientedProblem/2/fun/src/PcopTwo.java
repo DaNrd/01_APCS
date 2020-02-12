@@ -32,11 +32,10 @@ public class PcopTwo {
         System.out.println("N: " + input.get(0).get(0));
         System.out.println("K: " + input.get(0).get(1));
         System.out.println("Number of elements sent to Gulag: " + (input.get(0).get(0) - output.size()));
-        System.out.println("Percentage of Survival: " + ((input.get(0).get(0) - output.size()) * 100 / input.get(0).get(0)));
+        System.out.println("Percentage of Survival: " + (output.size() * 100 / input.get(0).get(0)));
     }
 
     public static String locateFile() {
-        BufferedReader reader;
         System.out.println("Please drag your file to the terminal window and leave no trailing spaces");
         Scanner location = new Scanner(System.in);
         return location.nextLine(); // records file location
@@ -74,21 +73,13 @@ public class PcopTwo {
             } else {
                 retval.add(two.get(0));
                 two.remove(0);
+                one.remove(1);
             }
         }
         while(two.size() > 0) {
             retval.add(two.get(0));
             two.remove(0);
         }
-//        for(int i = 1; i < one.size(); i++) {
-//            for(int j = 1; j < two.size(); j++) {
-//                if(one.get(i) < two.get(j)) {
-//                    retval.add(one.get(i));
-//                } else {
-//                    retval.add(two.get(j));
-//                }
-//            }
-//        }
         return retval;
     }
 

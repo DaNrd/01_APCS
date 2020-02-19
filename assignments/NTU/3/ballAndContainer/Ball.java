@@ -9,8 +9,8 @@ public class Ball {
         this.x = x;
         this.y = y;
         this.radius = radius;
-        this.xDelta = speed*Math.cos(Math.toRadians(direction));
-        this.yDelta = speed*Math.sin(Math.toRadians(direction));
+        this.xDelta = (float)(speed*Math.cos(Math.toRadians(direction)));
+        this.yDelta = (float)(speed*Math.sin(Math.toRadians(direction)));
     }
 
     public float getX() {

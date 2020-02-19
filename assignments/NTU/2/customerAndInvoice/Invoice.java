@@ -34,6 +34,6 @@ public class Invoice {
     }
 
     public double getAmountAfterDiscount() {
-        return (double) (this.amount/100)*this.getCustomer().getDiscount;
+        return (double) (this.amount/100)*this.getCustomer().getDiscount();
     }
 }

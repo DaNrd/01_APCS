@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Account {
     private int id;
     private Customer customer;
@@ -55,8 +57,8 @@ public class Account {
         }
     }
 
-    public void toString() {
-        DecimalFormat df = new DecimalFormat("###.##");
-        return this.customer + " balance=$"+df.format(this.balance.format);
+    public String toString() {
+        DecimalFormat df = new DecimalFormat("###,###,###,###,##0.00");
+        return this.customer + " balance=$"+df.format(this.getBalance());
     }
 }

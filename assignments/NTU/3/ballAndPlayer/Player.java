@@ -8,7 +8,7 @@ public class Player {
         this.number = number;
         this.x = x;
         this.y = y;
-        this.z = 0.0;
+        this.z = 0.0f;
     }
 
     public void move(float xDisp, float yDisp) {
@@ -24,8 +24,8 @@ public class Player {
         float xDiff = ball.getX() - this.x;
         float yDiff = ball.getY() - this.y;
         float zDiff = ball.getZ() - this.z;
-        float diag = Math.Sqrt(xDiff*xDiff+yDiff+yDiff);
-        float distance = Math.Sqrt(diag*diag+zDiff+zDiff);
+        double diag = Math.sqrt(xDiff*xDiff+yDiff+yDiff);
+        double distance = Math.sqrt(diag*diag+zDiff+zDiff);
         if(distance<8) {
             return true;
         } else {

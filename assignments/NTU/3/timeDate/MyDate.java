@@ -80,7 +80,7 @@ public class MyDate {
         }
     }
 
-    public nextMonth() {
-        // todo
+    public MyDate nextMonth() {
+        return new MyDate(this.year, this.month++, this.day);
     }
 }

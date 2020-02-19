@@ -12,29 +12,33 @@ public class Container {
     }
 
     public int getX() {
-        return this.x1;
+        return (int)this.x1;
     }
 
     public int getY() {
-        return this.y1;
+        return (int)this.y1;
     }
 
     public int getWidth() {
-        return this.y1-this.y2;
+        return (int)this.y1-this.y2;
     }
 
     public int getHeight() {
-        return this.x2-this.x1;
+        return (int)this.x2-this.x1;
     }
 
     public boolean collides(Ball ball) {
-        int ballx = ball.getX();
-        int bally = ball.getY();
-        int ballr = ball.getR();
+        float ballx = ball.getX();
+        float bally = ball.getY();
+        float ballr = ball.getRadius();
         if((ballx-ballr)<this.x1 || (ballx+ballr)>this.x2) {
             ball.reflectHorizontal();
+            return true;
         } else if((bally-ballr)<this.y2 || (bally+ballr)>this.y1) {
             ball.reflectVertical();
+            return true;
+        } else {
+            return false;
         }
     }
 

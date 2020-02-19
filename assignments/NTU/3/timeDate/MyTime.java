@@ -15,7 +15,7 @@ public class MyTime {
         this.second = second;
     }
 
-    public setTime(int hour, int minute, int second) {
+    public void setTime(int hour, int minute, int second) {
         this.hour = hour;
         this.minute = minute;
         this.second = second;
@@ -46,7 +46,7 @@ public class MyTime {
     }
 
     public String toString() {
-        String retval;
+        String retval = "";
         if(this.hour < 10) {
             retval += "0"+this.hour;
         } else {

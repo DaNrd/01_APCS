@@ -2,7 +2,7 @@
 
 ## Prompt:
 
-You are given an array a of size n containing integers. You are given Q queries of the form (l, r) which ask for the average of the integers between indices l and r inclusive
+You are given an array a of size n containing integers. You are given Q queries of the form (l, r) which ask for the average of the integers between indices l and r inclusive.
 
 ####Input Format:
 The first line will consist of an integer n.
@@ -14,19 +14,19 @@ The next line will consist of an integer q;
 The following q lines will contain queries as stated above.
 
 ####Constraints:
-1 <= n <= 2*10^5
+1 <= n <= 2￿￿￿•10<sup>5</sup>
 
-1 <= q <= 2*10^5
+1 <= q <= 2￿￿￿•10<sup>5</sup>
 
 1 <= l <= r <= n
 
-1 <= a[i] <= 10^6
+1 <= a[i] <= 10<sup>6</sup>
 
 ####Output format:
 Q integers separated by a new line containing the answers to the queries as described above. Print to 3 decimal places.
 
 ####Test Cases:
-https://drive.google.com/drive/folders/1DmP_xLq9Q9R6NvRzORA2AB4-SIVdU1Fl?usp=sharing
+Test cases and their solutions can be found [here](https://github.com/DaNrd/01_APCSprojects/class/programmingContestOrientedProblem/1/testCases).
 
 ## Project Description:
 

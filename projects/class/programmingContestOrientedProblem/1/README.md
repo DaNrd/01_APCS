@@ -14,9 +14,9 @@ The next line will consist of an integer q;
 The following q lines will contain queries as stated above.
 
 ####Constraints:
-1 <= n <= 2￿￿￿•10<sup>5</sup>
+1 <= n <= 2•10<sup>5</sup>
 
-1 <= q <= 2￿￿￿•10<sup>5</sup>
+1 <= q <= 2•10<sup>5</sup>
 
 1 <= l <= r <= n
 

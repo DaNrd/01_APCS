@@ -2,7 +2,7 @@
 
 ## Prompt:
 
-You are given N (1 <= N <= 2￿￿￿￿￿￿•￿10<sup>5</sup>) and M bidirectional edges (1 <= M <= 2￿￿￿•10<sup>5</sup>). Each edge has a cost, c. A path U --> V is defined as a sequence of distinct edges from node U to node V. The cost of a path is defined as the maximum cost over all edges in the path.
+You are given N (1 <= N <= 2•10<sup>5</sup>) and M bidirectional edges (1 <= M <= 2•10<sup>5</sup>). Each edge has a cost, c. A path U --> V is defined as a sequence of distinct edges from node U to node V. The cost of a path is defined as the maximum cost over all edges in the path.
 
 Your task is to find a path from node 1 to node N with minimum cost.
 

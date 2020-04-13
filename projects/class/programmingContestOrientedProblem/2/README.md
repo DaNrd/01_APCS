@@ -4,7 +4,7 @@
 
 You are given K sorted arrays, and the sum of the sizes of the arrays is N. Your task is to merge these arrays into one common array that is also sorted.
 
-####Input Format:
+###Input Format:
 The first line will contain integers N, where 1 <= N <= 2•10<sup>5</sup>, and K, where 1 <= K <= N.
 The next K lines will contain an integer s followed by s integers representing an array of size s
 
@@ -14,13 +14,13 @@ Sample Input:\
 `5 2 3 8 9 10`\
 `3 4 5 6`
 
-####Output format: 
+###Output format: 
 N integers in sorted order
 
 Sample Output:\
 `1 2 3 4 5 6 7 8 9 10`
 
-####Test Cases:
+###Test Cases:
 Test cases and their solutions can be found [here](https://github.com/DaNrd/01_APCSprojects/class/programmingContestOrientedProblem/2/testCases).
 
 ## Project Description:

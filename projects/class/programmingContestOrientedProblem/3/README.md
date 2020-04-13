@@ -6,7 +6,7 @@ You are given N (1 <= N <= 2•10<sup>5</sup>) and M bidirectional edges (1 <= M
 
 Your task is to find a path from node 1 to node N with minimum cost.
 
-####Input Format:
+###Input Format:
 The first line will consist of integers N and M.
 The next M lines will consist of 3 integers, u, v, and c, which represents an edge connecting u and v of cost c.
 
@@ -19,13 +19,13 @@ Sample Input:\
 `3 4 2`\
 `1 4 3`
 
-####Output format: 
+###Output format: 
 One integer that is the minimum cost of a path from node 1 to node N
 
 Sample Output:\
 `1`
 
-####Test Cases:
+###Test Cases:
 Test cases and their solutions can be found [here](https://github.com/DaNrd/01_APCSprojects/class/programmingContestOrientedProblem/3/testCases).
 
 ## Project Description:

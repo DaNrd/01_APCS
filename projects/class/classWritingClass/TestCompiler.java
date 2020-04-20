@@ -6,7 +6,7 @@ public class TestCompiler {
 
         Field token2 = new Field("String", "favoriteColor", "red");
 
-        ArrayList fieldList = new ArrayList();
+        ArrayList<Field> fieldList = new ArrayList<Field>();
 
         fieldList.add(token1);
 

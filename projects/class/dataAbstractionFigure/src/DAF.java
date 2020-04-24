@@ -6,6 +6,7 @@ public class DAF {
     public int numVirusDeaths;
     public String state;
     private int day0;
+    public String data;
 
     DAF(String dateString, String state, int fips, int numVirusCases, int numVirusDeaths) {
         this.day0 = convertDateToDays("2020-01-01");
@@ -15,6 +16,7 @@ public class DAF {
         this.fips = fips;
         this.numVirusCases = numVirusCases;
         this.numVirusDeaths = numVirusDeaths;
+        this.data = fips + "," + numVirusCases + "," + numVirusDeaths;
     }
 
     DAF(String dateString, String state, int fips, int numVirusCases, int numVirusDeaths, String day0) {
@@ -25,10 +27,15 @@ public class DAF {
         this.fips = fips;
         this.numVirusCases = numVirusCases;
         this.numVirusDeaths = numVirusDeaths;
+        this.data = fips + "," + numVirusCases + "," + numVirusDeaths;
     }
 
     public int getDate() {
         return date;
+    }
+
+    public String getDateString() {
+        return this.dateString;
     }
 
     public String getState() {
@@ -51,8 +58,12 @@ public class DAF {
         return day0;
     }
 
-    public void setDate(int date) {
-        this.date = date;
+    public String getData() {
+        return this.data;
+    }
+
+    public void setDate(String date) {
+        this.date = convertDateToDays(date);
     }
 
     public void setState(String state) {
@@ -61,14 +72,17 @@ public class DAF {
 
     public void setFips(int fips) {
         this.fips = fips;
+        this.data = fips + "," + numVirusCases + "," + numVirusDeaths;
     }
 
     public void setNumVirusCases(int numVirusCases) {
         this.numVirusCases = numVirusCases;
+        this.data = fips + "," + numVirusCases + "," + numVirusDeaths;
     }
 
     public void setNumVirusDeaths(int numVirusDeaths) {
         this.numVirusDeaths = numVirusDeaths;
+        this.data = fips + "," + numVirusCases + "," + numVirusDeaths;
     }
 
     public void setDay0(int day0) {

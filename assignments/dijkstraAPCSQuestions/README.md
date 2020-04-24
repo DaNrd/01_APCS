@@ -1,4 +1,4 @@
-#Question 1
+# Question 1
 
 The Node class contains 2 fields; a boolean representing whether or not the node has been visited, and a map of adjacent nodes with costs.
 
@@ -54,12 +54,12 @@ java class Node {
 }
 ```
 
-####Part a)
+#### Part a)
 In Dijkstra's algorithm, all nodes are initially assumed to have a cost of infinite value. Choose a sensible initial value for the cost in accordance to dijkstra's algorithm.
 ```java
     this.cost =                        ;
 ```
-####Part b)
+#### Part b)
 The Node class contains methods allowing other classes to interact with and modify its HashMap field. Complete the designated methods in order to allow these interactions.
 ```java
     public void addAdjacent(                        ) {
@@ -89,7 +89,7 @@ The Node class contains methods allowing other classes to interact with and modi
 
     }
 ```
-####Part c)
+#### Part c)
 The Node class contains a method which returns a map of unvisited nodes and their costs. Please write the implementation of this class.
 ```java
     public HashMap<Node, int> listUnvisitedConnections(                        ) {
@@ -107,7 +107,7 @@ The Node class contains a method which returns a map of unvisited nodes and thei
 
     }
 ```
-#Question 2
+# Question 2
 
 The Dijk class contains many methods and a main method that collectively preform Dijkstra's algorithm on a given map of nodes. The class can be seen below:
 
@@ -145,7 +145,7 @@ public class Dijk {
 }
 ```
 
-####Part a)
+#### Part a)
 Complete the constructor for the Dijk class to accept the following call:
 ```java
 ArrayList<Node> param1; // the graph
@@ -171,7 +171,7 @@ Do so below:
     }
 ```
 
-####Part b)
+#### Part b)
 Complete the updateCost method:
 ```java
     public void updateCost(Node n, int cost) {
@@ -190,13 +190,13 @@ Complete the updateCost method:
     }
 ```
 
-#Example Answers
-###Question 1
-####a)
+# Example Answers
+### Question 1
+#### a)
 ```java
     this.cost = Integer.MAX_VALUE;
 ```
-####b)
+#### b)
 ```java
     public void addAdjacent(int i, Node n) {
         this.adjacent.put(i,n);
@@ -210,7 +210,7 @@ Complete the updateCost method:
         this.adjacent.clear();
     }
 ```
-####c)
+#### c)
 ```java
     public HashMap<Node, int> listUnvisitedConnections() {
         HashMap<int, Node> unvisited = new HashMap<Node, int>();
@@ -222,8 +222,8 @@ Complete the updateCost method:
         return unvisited;
     }
 ```
-###Question 2
-####a)
+### Question 2
+#### a)
 ```java
     public Dijk(ArrayList<Node> graph, Node start) {
         this.graph = graph;
@@ -231,7 +231,7 @@ Complete the updateCost method:
         this.pathCosts = new HashMap<Node, int>();
     }
 ```
-####b)
+#### b)
 ```java
 public void updateCost(Node n, int cost) {
     if(n.getCost() < cost) {

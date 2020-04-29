@@ -1,4 +1,4 @@
-public class DAF {
+public class Figure {
     public int date;
     public String dateString;
     public int fips;
@@ -8,7 +8,7 @@ public class DAF {
     private int day0;
     public String data;
 
-    DAF(String dateString, String state, int fips, int numVirusCases, int numVirusDeaths) {
+    Figure(String dateString, String state, int fips, int numVirusCases, int numVirusDeaths) {
         this.day0 = convertDateToDays("2020-01-01");
         this.date = convertDateToDays(dateString) - day0;
         this.dateString = dateString;
@@ -19,9 +19,31 @@ public class DAF {
         this.data = fips + "," + numVirusCases + "," + numVirusDeaths;
     }
 
-    DAF(String dateString, String state, int fips, int numVirusCases, int numVirusDeaths, String day0) {
+    Figure(String dateString, String state, int fips, int numVirusCases, int numVirusDeaths, String day0) {
         this.day0 = convertDateToDays(day0);
         this.date = convertDateToDays(dateString);
+        this.dateString = dateString;
+        this.state = state;
+        this.fips = fips;
+        this.numVirusCases = numVirusCases;
+        this.numVirusDeaths = numVirusDeaths;
+        this.data = fips + "," + numVirusCases + "," + numVirusDeaths;
+    }
+
+    Figure(int date, String state, int fips, int numVirusCases, int numVirusDeaths) {
+        this.day0 = convertDateToDays("2020-01-01");
+        this.date = date;
+        this.dateString = dateString;
+        this.state = state;
+        this.fips = fips;
+        this.numVirusCases = numVirusCases;
+        this.numVirusDeaths = numVirusDeaths;
+        this.data = fips + "," + numVirusCases + "," + numVirusDeaths;
+    }
+
+    Figure(int date, String state, int fips, int numVirusCases, int numVirusDeaths, String day0) {
+        this.day0 = convertDateToDays(day0);
+        this.date = date;
         this.dateString = dateString;
         this.state = state;
         this.fips = fips;

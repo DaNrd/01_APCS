@@ -11,6 +11,14 @@ public class StateFigures {
         this.FigureList.add(item);
     }
 
+    public ArrayList<Figure> getFigures() {
+        return this.FigureList;
+    }
+
+    public String getState() {
+        return FigureList.get(0).getState();
+    }
+
     public int getTotalFips() {
         int retval = 0;
         for(Figure e: this.FigureList) {

@@ -32,5 +32,9 @@ public class TestProgram {
 // inspect the results (should print 46)
 
         System.out.println(KansasStats.getTotalDeaths());
+        DataPlot plot1 = new DataPlot();
+        plot1.setDefaultCloseOperation(plot1.EXIT_ON_CLOSE);
+        plot1.setVisible(true);
+        plot1.paintStateCases(KansasStats);
     }
 }
